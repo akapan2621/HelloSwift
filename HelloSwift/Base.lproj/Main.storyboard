@@ -18,35 +18,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBN-kO-iSv">
-                                <rect key="frame" x="70" y="200" width="281" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="54"/>
-                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="5" height="-1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXr-db-Ztg">
-                                <rect key="frame" x="107" y="346" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXr-db-Ztg">
+                                <rect key="frame" x="98" y="353.5" width="100" height="36"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6AD-oW-Cjk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <state key="normal" title="Click Me"/>
                                 <connections>
                                     <action selector="clickMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDb-ua-Zmr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mt-cK-uvl">
+                                <rect key="frame" x="217" y="353.5" width="100" height="39"/>
+                                <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Wd8-99-Q2i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="Add Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfN-ds-aoU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBN-kO-iSv">
+                                <rect key="frame" x="20" y="191" width="374" height="65"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="54"/>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="5" height="-1"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Friend Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQQ-SL-Xwa">
+                                <rect key="frame" x="66.5" y="287.5" width="281" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="RFN-mk-nJX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Mt-cK-uvl" firstAttribute="top" secondItem="WQQ-SL-Xwa" secondAttribute="bottom" constant="36" id="6ea-DR-QYQ"/>
+                            <constraint firstItem="QXr-db-Ztg" firstAttribute="top" secondItem="WQQ-SL-Xwa" secondAttribute="bottom" constant="36" id="DY4-iB-OeY"/>
+                            <constraint firstItem="WQQ-SL-Xwa" firstAttribute="top" secondItem="TBN-kO-iSv" secondAttribute="bottom" constant="31.5" id="PNQ-xg-gGh"/>
+                            <constraint firstItem="QXr-db-Ztg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-59" id="PZw-i3-5eh"/>
+                            <constraint firstItem="TBN-kO-iSv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TKZ-YI-Sub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBN-kO-iSv" secondAttribute="trailing" constant="20" id="Xiy-5k-coM"/>
+                            <constraint firstItem="TBN-kO-iSv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="147" id="bN0-gr-Y71"/>
+                            <constraint firstItem="WQQ-SL-Xwa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i32-MN-7Bg"/>
+                            <constraint firstItem="9Mt-cK-uvl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="ypi-WO-Xpy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="friendTextField" destination="WQQ-SL-Xwa" id="A1v-RE-Hlc"/>
                         <outlet property="titleLabel" destination="TBN-kO-iSv" id="jYH-ds-SYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
     </scenes>
 </document>

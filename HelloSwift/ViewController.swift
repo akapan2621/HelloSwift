@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
 //    Explicit
     var name: String = "Akapan"
+    var friend: String = ""
+    
+    
+    @IBOutlet weak var friendTextField: UITextField!
     
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -20,6 +24,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }   // Main Function
+    
+    
+    
+    @IBAction func addMeButton(_ sender: Any) {
+        friend = friendTextField.text!
+        titleLabel.text = friend
+    }
     
     
     @IBAction func clickMeButton(_ sender: UIButton) {
